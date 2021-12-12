@@ -6,9 +6,9 @@ export class Post {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @ManyToOne(() => User, user => user.posts)
-  user: User
-
   @Column()
   message: string
+
+  @ManyToOne(() => User, user => user.posts)
+  owner: User
 }

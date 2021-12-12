@@ -9,6 +9,6 @@ export class User {
   @Column()
   username: string;
 
-  @OneToMany(() => Post, post => post.user)
+  @OneToMany(() => Post, post => post.owner)
   posts: Post[];
 }
